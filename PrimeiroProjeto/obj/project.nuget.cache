@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Oi+2mU8OT8TuZyVOA5U5ZyLMzvymCNAOy+Cb0zaTNkOCJIggaMKVYFX8BQok3QTcHgzenC6eHC4f2pCHlktwVw==",
+  "success": true,
+  "projectFilePath": "/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/PrimeiroProjeto.csproj",
+  "expectedPackageFiles": [
+    "/home/leao/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.11/microsoft.aspnetcore.app.ref.7.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

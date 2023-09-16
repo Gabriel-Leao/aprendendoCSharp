@@ -1,0 +1,15 @@
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/bin/Debug/net7.0/PrimeiroProjeto
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/bin/Debug/net7.0/PrimeiroProjeto.deps.json
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/bin/Debug/net7.0/PrimeiroProjeto.runtimeconfig.json
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/bin/Debug/net7.0/PrimeiroProjeto.dll
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/bin/Debug/net7.0/PrimeiroProjeto.pdb
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.csproj.AssemblyReference.cache
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.GeneratedMSBuildEditorConfig.editorconfig
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.AssemblyInfoInputs.cache
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.AssemblyInfo.cs
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.csproj.CoreCompileInputs.cache
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.dll
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/refint/PrimeiroProjeto.dll
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.pdb
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/PrimeiroProjeto.genruntimeconfig.cache
+/home/leao/Dev/Studies/C# com Orientação a Objetos/PrimeiroProjeto/obj/Debug/net7.0/ref/PrimeiroProjeto.dll
