@@ -1,8 +1,10 @@
 ﻿using static System.Console;
 
-var registeredBands = new Dictionary<string, List<float>>();
-registeredBands.Add("Beatles", new List<float> { 10, 9, 9 });
-registeredBands.Add("Led Zeppelin", new List<float>());
+var registeredBands = new Dictionary<string, List<float>>
+{
+    { "Beatles", new List<float> { 10, 9, 9 } },
+    { "Led Zeppelin", new List<float>() }
+};
 
 ShowMenuOptions();
 return;
@@ -57,7 +59,7 @@ void ShowLogo(string message)
 void RegisterBand()
 {
     Clear();
-    ShowOptionTitle("Rigistro de banda");
+    ShowOptionTitle("Registro de banda");
     Write("Digite o nome da banda: ");
     var bandName = ReadLine()!;
     registeredBands.Add(bandName, new List<float>());
@@ -118,7 +120,6 @@ void ReviwBand()
 void ShowBandAverage()
 {
     Clear();
-    float average = 0;
     ShowOptionTitle("Media da banda");
     Write("Digite a banda que deseja ver a média: ");
     var bandName = ReadLine()!;
