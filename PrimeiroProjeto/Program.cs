@@ -1,6 +1,8 @@
 ﻿using static System.Console;
 
-var bandsList = new List<string> {"Beatles", "Led Zeppelin"};
+var registeredBands = new Dictionary<string, List<float>>();
+registeredBands.Add("Beatles", new List<float> { 10, 9, 9 });
+registeredBands.Add("Led Zeppelin", new List<float>());
 
 ShowMenuOptions();
 return;
@@ -36,10 +38,10 @@ void ShowMenuOptions()
             ListBands();
             break;
         case 3:
-            WriteLine($"\nVocê digitou a opção: {option}");
+            ReviwBand();
             break;
         case 4:
-            WriteLine($"\nVocê digitou a opção: {option}");
+            ShowBandAverage();
             break;
         default:
             WriteLine("\nPor favor, digite apenas números entre 0-4");
@@ -55,10 +57,10 @@ void ShowLogo(string message)
 void RegisterBand()
 {
     Clear();
-    WriteLine("Rigistro de banda");
+    ShowOptionTitle("Rigistro de banda");
     Write("Digite o nome da banda: ");
     var bandName = ReadLine()!;
-    bandsList.Add(bandName);
+    registeredBands.Add(bandName, new List<float>());
     WriteLine($"\nA banda {bandName}, foi registrada com sucesso!");
     Thread.Sleep(2000);
     Clear();
@@ -68,19 +70,85 @@ void RegisterBand()
 void ListBands()
 {
     Clear();
-    WriteLine("===================");
-    WriteLine("Bandas registradas");
-    WriteLine("===================\n");
-    for (var i = 0; i < bandsList.Count; i++)
+    ShowOptionTitle("Bandas registradas");
+    for (var i = 0; i < registeredBands.Keys.Count; i++)
     {
-        WriteLine($"{i + 1} - {bandsList[i]}");
+        WriteLine($"{ i + 1 } - {registeredBands.Keys.ElementAt(i)}");
     }
-    // foreach (var band in bandsList)
-    // {
-    //     WriteLine(band);
-    // }
-    WriteLine("\nDigite qualquer coisa para voltar a tela inicial");
+    WriteLine("\nDigite qualquer tecla para voltar a tela inicial");
     ReadKey();
     Clear();
     ShowMenuOptions();
+}
+
+void ShowOptionTitle(string title)
+{
+    WriteLine("".PadLeft(title.Length, '='));
+    WriteLine(title);
+    WriteLine("".PadLeft(title.Length, '=') + "\n");
+}
+
+void ReviwBand()
+{
+    Clear();
+    ShowOptionTitle("Avaliar banda");
+    Write("Digite a banda que deseja avaliar: ");
+    var bandName = ReadLine()!;
+
+    if (registeredBands.ContainsKey(bandName))
+    {
+        Write("Digite uma nota de 0 a 10: ");
+        var grade = int.Parse(ReadLine()!);
+        registeredBands[bandName].Add(grade);
+        WriteLine($"A nota, {grade}, foi registrada com sucesso a banda {bandName}");
+        Thread.Sleep(3000);
+        Clear();
+        ShowMenuOptions();
+    }
+    else
+    {
+        WriteLine($"\nA banda {bandName}, não foi encontrada!");
+        WriteLine("Digite qualquer tecla para voltar a tela inicial");
+        ReadKey();
+        Clear();
+        ShowMenuOptions();
+    }
+}
+
+void ShowBandAverage()
+{
+    Clear();
+    float average = 0;
+    ShowOptionTitle("Media da banda");
+    Write("Digite a banda que deseja ver a média: ");
+    var bandName = ReadLine()!;
+
+
+    if (registeredBands.ContainsKey(bandName))
+    {
+        if (registeredBands[bandName].Count > 0)
+        {
+            WriteLine($"\nA média da banda { bandName }, é { Math.Round(registeredBands[bandName].Average(), 1) }");
+            WriteLine("Digite qualquer tecla para voltar a tela inicial");
+            ReadKey();
+            Clear();
+            ShowMenuOptions();
+        }
+        else
+        {
+            WriteLine($"\nA banda {bandName}, não tem nenhuma nota cadastrada!");
+            WriteLine("Digite qualquer tecla para voltar a tela inicial");
+            ReadKey();
+            Clear();
+            ShowMenuOptions();
+        }
+    }
+    else
+    {
+        WriteLine($"\nA banda {bandName}, não foi encontrada!");
+        WriteLine("Digite qualquer tecla para voltar a tela inicial");
+        ReadKey();
+        Clear();
+        ShowMenuOptions();
+    }
 }
