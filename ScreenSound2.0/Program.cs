@@ -1,4 +1,7 @@
-﻿var registeredBands = new Dictionary<string, List<int>>
+﻿using ScreenSound2._0.Models;
+
+var queen = new Band("Queen");
+var registeredBands = new Dictionary<string, List<int>>
 {
     { "Linkin Park", new List<int> { 10, 8, 6 } },
     { "The Beatles", new List<int>() }
